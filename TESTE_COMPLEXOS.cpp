@@ -1,7 +1,6 @@
 #include "Complexo.h"
 #include <stdio.h>
 
-
 int main() {
 	Complexo z1(3, 4);
 	Complexo z2(3, 4);
@@ -26,7 +25,7 @@ int main() {
 		}
 
 		//Teste Divisao
-		modulo = ((z1.Divisao(z2)) - divisao).Modulo();
+		modulo = ((z1.Divisao(z2)).Diferenca(divisao)).Modulo();
 		if (modulo == 0) {
 			printf("Divisao OK\n");
 		}
@@ -35,7 +34,7 @@ int main() {
 		}
 
 		//Teste Conjugado
-		modulo = (z1.Conjugado() - conjugado).Modulo();
+		modulo = (z1.Conjugado().Diferenca(conjugado)).Modulo();
 		if (modulo == 0) {
 			printf("Conjugado OK\n");
 		}
@@ -44,7 +43,7 @@ int main() {
 		}
 
 		//Teste Produto
-		modulo = ((z1.Produto(z2)) - produto).Modulo();
+		modulo = ((z1.Produto(z2)).Diferenca(produto)).Modulo();
 		if (modulo == 0) {
 			printf("produto OK\n");
 		}
@@ -53,7 +52,7 @@ int main() {
 		}
 
 		//Teste Soma
-		modulo = ((z1.Soma(z2)) - soma).Modulo();
+		modulo = ((z1.Soma(z2)).Diferenca(soma)).Modulo();
 		if (modulo == 0) {
 			printf("Soma OK\n");
 		}
